@@ -6,7 +6,7 @@
 #include "HangMan.cpp"
 using namespace std;
 
-//${fileBasenameNoExtension}
+
 
 int main()
 {

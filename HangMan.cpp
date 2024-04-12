@@ -115,12 +115,12 @@ bool HangMan::checkLetter(char character)
 
 void HangMan::setWord(string &x)
 {
-    //srand(static_cast<unsigned int>(time(nullptr)));
+    
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<int> distribution(1, 200);
 
-    int index = distribution(gen);          //1 + rand() % (200 - 1 + 1);
+    int index = distribution(gen);          
 
     ifstream file;
     file.open("wordList.txt");
@@ -129,9 +129,7 @@ void HangMan::setWord(string &x)
         file >> x;
 
     file.close();   
-
-    //for(int i = 0; i < word.length(); i++)
-    //    guessWord.push_back('-'); 
+ 
 }
 
 void HangMan::Drawing()
